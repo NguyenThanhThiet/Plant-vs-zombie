@@ -290,7 +290,6 @@ public class Plant_Zombie extends JPanel implements Runnable, Action {
         return true;
     }
     public boolean canMove(int targetRow, int targetCol) {
-
         for (Plant p : matPlant.get(targetRow)) {
             if (p.getRow() == targetRow && p.getCol() == targetCol) {
                 return false;
@@ -396,14 +395,13 @@ public class Plant_Zombie extends JPanel implements Runnable, Action {
     @Override
     public void ZombieDie(ZombieDie zombieDie) {
         zombieDies.add(zombieDie);
-
         Timer time = new Timer();
         time.schedule(new TimerTask() {
             @Override
             public void run() {
                 zombieDies.remove(zombieDie);
             }
-        }, 2300);
+        }, 1300);
     }
 
 }

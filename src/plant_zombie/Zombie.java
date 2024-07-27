@@ -64,8 +64,8 @@ public class Zombie {
         timer = new Timer();
         timer.schedule(walkingZombie(), 0, speed);
         this.action = action;
-        headZombie.flush();
-        bodyZombie.flush();
+        headZombie = new ImageIcon("src\\plant_zombie\\Image\\zombiehead.gif").getImage();
+        bodyZombie = new ImageIcon("src\\plant_zombie\\Image\\zombiedie.gif").getImage();
         timeAudio = new Timer();
         timeAudio.schedule(new TimerTask() {
             @Override

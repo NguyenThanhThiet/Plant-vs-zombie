@@ -21,6 +21,8 @@ public class ZombieDie {
         this.y = y;
         this.imgHead = imgHead;
         this.imgBody = imgBody;
+        imgHead.flush();
+        imgBody.flush();
     }
 
     public Image getImgHead() {
